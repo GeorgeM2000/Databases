@@ -1,3 +1,4 @@
+/* University Table ======================================================================= */
 create table University (
 	University_Name varchar(80) not null,
     University_Address varchar(100),
@@ -8,7 +9,7 @@ create table University (
     primary key(University_Name)
     );
     
-    
+/* Department Table ====================================================================== */
  create table Department (
 	Code int not null,
 	Email varchar(80),
@@ -21,6 +22,7 @@ create table University (
     foreign key (University_Name) references University(University_Name)
     );
     
+    /* Student Table ===================================================================== */
     create table Student (
 		AM int not null,
         SName varchar(50),
@@ -33,6 +35,7 @@ create table University (
         foreign key (Code) references Department(Code)
 	);
     
+    /* Employee Table ===================================================================== */
     create table Employee (
 		Employee_Code int not null,
         Employee_Name varchar(50),
@@ -45,6 +48,8 @@ create table University (
         foreign key (Code) references Department(Code)
 	);
     
+    
+    /* Administrative Employee Table ====================================================== */
     create table Administrative_Employee (
 		Employee_Code int not null,
         Admi_Employee_Afm int,
@@ -55,6 +60,8 @@ create table University (
         primary key (Employee_Code)
 	);
     
+    
+    /* Professor Table ================================================================ */
     create table Professor (
 		Employee_Code int not null,
         Professor_Grade varchar(50),
@@ -67,8 +74,8 @@ create table University (
         foreign key (Code) references Department(Code)
 	);
     
-    
-    create table subject (
+    /* Subject Table ================================================================== */
+    create table Subject (
 		Subject_Code int not null,
         Subject_Description varchar(200),
         Subject_Name varchar(50),
@@ -78,6 +85,7 @@ create table University (
         foreign key (Employee_Code) references Professor(Employee_Code)
 	);
     
+    /* Undergraduate Table =========================================================== */
     create table Undergraduate (
 		AM int not null,
         YearOfAdmition int,
@@ -86,6 +94,8 @@ create table University (
         primary key(AM)
 	);
     
+    
+    /* Postgraduate Table ============================================================ */
     create table PostGraduate (
 		AM int not null,
         TitleOfThesis varchar(80),
@@ -95,6 +105,7 @@ create table University (
         primary key (AM)
 	);
     
+    /* Attends Table ================================================================= */
     create table Attends (
 		AM int,
         Subject_Code int,
