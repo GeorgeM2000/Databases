@@ -2,7 +2,12 @@
 
 ---
 
-## Description
+# Description
 
-This repository contains various MySQL projects, scripts and exercises. The description for each project, script and exercise
-is present in the MySQL files. I use the latest version of MySQL.
+This repository contains various database projects, scripts and exercises. The description for each of them
+is present in the folders. 
+
+
+# Requirments
+- MySQL version 8.0
+- draw.io Diagrams App (to design the ER-MODELS)
