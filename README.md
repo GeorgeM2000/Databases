@@ -7,7 +7,6 @@
 This repository contains various database projects, scripts and exercises. The description for each of them
 is present in the folders. 
 
---- 
 
 # Requirments
 - MySQL version 8.0
